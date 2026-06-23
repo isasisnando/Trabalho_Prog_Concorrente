@@ -1,3 +1,31 @@
+/*
+ * TRABALHO 1 - PROGRAMACAO CONCORRENTE
+ *
+ * PROBLEMA: A MARATONA DE PROGRAMACAO (O Problema dos PCs Compartilhados)
+ *
+ * CONTEXTO:
+ * Uma grande equipe de estudantes esta participando de um contest decisivo no 
+ * Codeforces. A equipe possui 'N' programadores, mas o laboratorio disponibilizou 
+ * apenas 'C' computadores, de modo que N > C. Como a competicao e acirrada, o 
+ * uso dos computadores precisa ser otimizado. 
+ *
+ * Para maximizar a pontuacao, a equipe se dividiu em duas categorias:
+ * - EXPERTS: Programadores com rating >= 1600.
+ * - NORMAIS: Programadores com rating < 1600.
+ *
+ * REGRAS DO SISTEMA:
+ * 1. Exclusao Mutua: Apenas um programador pode ocupar um computador por vez.
+ * No maximo 'C' computadores podem estar em uso simultaneamente.
+ * 2. Prioridade Absoluta: Os Experts 
+ * digitam mais rapido. Se um computador ficar livre e houver um 
+ * Expert na fila, o programador Normal deve obrigatoriamente ceder a vez.
+ * 3. Sem Starvation: Apesar da prioridade, programadores normais 
+ * precisam conseguir submeter seus codigos assim que nao houver mais nenhum 
+ * Expert aguardando um computador.
+ * 4. Dinamica: O tempo que um programador passa lendo o problema (pensando) e o 
+ * tempo que passa digitando a solucao (codando) sao variaveis.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
